@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE9B35B829E9E863007A13F4 /* duck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9B35B729E9E863007A13F4 /* duck.mp3 */; };
 		CEFF38C829E5D77500B58DC5 /* DragNDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF38C729E5D77500B58DC5 /* DragNDropApp.swift */; };
 		CEFF38CA29E5D77500B58DC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF38C929E5D77500B58DC5 /* ContentView.swift */; };
 		CEFF38CC29E5D77600B58DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFF38CB29E5D77600B58DC5 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE9B35B729E9E863007A13F4 /* duck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = duck.mp3; sourceTree = "<group>"; };
 		CEFF38C429E5D77500B58DC5 /* DragNDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragNDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFF38C729E5D77500B58DC5 /* DragNDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNDropApp.swift; sourceTree = "<group>"; };
 		CEFF38C929E5D77500B58DC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE9B35B429E9E807007A13F4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B35B729E9E863007A13F4 /* duck.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		CEFF38BB29E5D77500B58DC5 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 			children = (
 				CEFF38C729E5D77500B58DC5 /* DragNDropApp.swift */,
 				CEFF38C929E5D77500B58DC5 /* ContentView.swift */,
+				CE9B35B429E9E807007A13F4 /* Sounds */,
 				CEFF38CB29E5D77600B58DC5 /* Assets.xcassets */,
 				CEFF38CD29E5D77600B58DC5 /* Preview Content */,
 			);
@@ -127,6 +138,7 @@
 			files = (
 				CEFF38CF29E5D77600B58DC5 /* Preview Assets.xcassets in Resources */,
 				CEFF38CC29E5D77600B58DC5 /* Assets.xcassets in Resources */,
+				CE9B35B829E9E863007A13F4 /* duck.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

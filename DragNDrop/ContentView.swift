@@ -35,9 +35,36 @@
 //    }
 //}
 
+
+
 import SwiftUI
+import AVKit
+
+class SoundManager {
+    
+    static let instance = SoundManager()
+    
+    var player: AVAudioPlayer?
+    
+    func playSound() {
+        
+        guard let url = Bundle.main.url(forResource: "duck", withExtension: ".mp3") else { return }
+        
+        do{
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error {
+            print("Erro, sem som. \(error.localizedDescription)")
+        }
+    }
+        
+}
+
+
+
 
 struct ContentView: View {
+    
     @State var isDragging = false
     @State var position = CGPoint.zero
     
@@ -58,8 +85,10 @@ struct ContentView: View {
                             })
                             .onEnded { _ in
                                 isDragging = false
+                                SoundManager.instance.playSound()
                             }
                     )
+                    
             }
             Spacer()
         }
@@ -74,7 +103,7 @@ struct ContentView: View {
             
         } else if position.x < halfScreenWidth {
             if position.y < halfScreenHeight {
-                return Color.red
+                return Color.init(hue: 2.4, saturation: 3.4, brightness: 5.4)
                 
             } else {
                 return Color.purple
