@@ -60,13 +60,13 @@ class SoundManager {
         
 }
 
-
-
-
 struct ContentView: View {
     
     @State var isDragging = false
     @State var position = CGPoint.zero
+    @State private var actionExecuted = false
+    
+    //SoundManager.instance.playSound()
     
     var body: some View {
         VStack {
@@ -80,12 +80,18 @@ struct ContentView: View {
                     .gesture(
                         DragGesture()
                             .onChanged({ value in
+                                if !actionExecuted {
+                                    SoundManager.instance.playSound()
+                                    actionExecuted = true
+                                }
                                 position = value.location
                                 isDragging = true
+                                
                             })
                             .onEnded { _ in
                                 isDragging = false
-                                SoundManager.instance.playSound()
+                                actionExecuted = false
+                                
                             }
                     )
                     
@@ -103,7 +109,7 @@ struct ContentView: View {
             
         } else if position.x < halfScreenWidth {
             if position.y < halfScreenHeight {
-                return Color.init(hue: 2.4, saturation: 3.4, brightness: 5.4)
+                return Color.red
                 
             } else {
                 return Color.purple
